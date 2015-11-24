@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sport</title>
+	<link rel="stylesheet" href="bootstrap.min.css">
+  <script src="jquery.min.js"></script>
+</head>
+<body>
+  
+  <script type="text/javascript">
+
+$(function(){
+  $("#Quizzzz").submit(function(evt){
+
+    evt.preventDefault();
+
+    var answers =$(this).serializeArray();
+
+    var answerString =JSON.stringify(answers);
+
+      alert(answerString);
+
+      //how to check the answer?
+
+      //create a space on the right to display the score...
+    });
+  });
+
+</script>
+<form id="Quizzzz">
+  <div class="container">
+<h1>My Sport Quizz!</h1>
+
+<h2>What is the most popular sport in SA.</h2>
+<div class="radio">
+  <label>
+    <input type="radio" name="question1" value="Under water hockey">
+    Under water hockey
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question1" value="Rugby">
+   Rugby
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question1" value="Soccer">
+    Soccer
+  </label>
+</div>
+
+<h2>For which sport do u need a reaket.</h2>
+<div class="radio">
+  <label>
+    <input type="radio" name="question2" value="Netball">Netball</label>
+</div>
+<div class="radio">
+  <label>
+  <input type="radio" name="question2" value="Squash">Squash</label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="question2" value="Basketball">Basketball</label>
+</div>
+
+<h2>Which sport ues the word love.</h2>
+<div class="radio">
+  <label><input type="radio" name="question3" value="Soccer">Soccer</label></div>
+
+<div class="radio">
+  <label><input type="radio" name="question3" value="Tennis">Tennis</label></div>
+
+<div class="radio">
+  <label><input type="radio" name="question3" value="Volleyball">Volleyball</label>
+
+</div>
+
+</div>
+</div>
+
+<button id="Button" class="btn btn-primary" type="submit">Button</button> 
+</div>
+
+  </form>
+	
+	<script src="bootstrap.min.js"></script>
+</body>  
+</html>
