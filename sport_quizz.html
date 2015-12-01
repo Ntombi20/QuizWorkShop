@@ -52,47 +52,47 @@
 </div>
 
  <div class="col-md-4 bg-info text-center">
-<h1>Your score</h1>
+<h1></h1>
 
-<div id="answers">
-<span>Score: </span>
-
-</div>
+<div id="answers"></div>
+<!-- <span>score: </span> -->
+<span id="answers"></span>
 <script type="text/javascript">
 
-var correctAnswers = {question1 : 'Rugby', question2 : 'Squash', question3 : 'Tennis'};
+  var correctAnswers = {question1 : 'Rugby', question2 : 'Squash', question3 : 'Tennis'};
 
-$(function() {
-  $("#Quizzzz").submit(function(evt){
-    evt.preventDefault();
+  // var score = 0;
+
+
+//$(function() {
+//   $("#Quizzzz").submit(function(evt){
+//     evt.preventDefault();
 
     var answers =$(this).serializeArray();
     var answerString =JSON.stringify(answers);
 
     $("#answers").html(answerString);
 
-
-$.each(answers, function(question, answer) {
-        if($('input:radio[name="' + question + '"]:checked').val() == answer)s
+       $('#Quizzzz').submit(function(e) {
+    $.each(correctAnswers, function(question, answer) {
+        if($('input:radio[name="' + question + '"]:checked').val() == answer)
             alert(question + ': True');
-         else
-             alert(question + ': False!');
-         alert("you got : " + score);
+        else
+            alert(question + ': False!');
 
-
-// var score = 0;
-
-// for(var i=0; i < data.users[0].answers.length; i++) {
-//   alert(data.users[0].answers[i].kscore);
-// } 
-
+//         score=score+1;
+//     $('#answerString').text(score);
+// });
 
     });
-
-   }); 
+    e.preventDefault();
 });
 
 
+ 
+
+
+    
 </script>
 </div>	
 </body>  
